@@ -18,7 +18,7 @@ tmp_dir=$(mktemp -d)
 echo $tmp_dir
 
 #clone Github repo
-git clone git@github.com/samuelervin/argocd-learning.git $tmp_dir
+git clone https://github.com/samuelervin/argocd-learning.git $tmp_dir
 
 #update the image tag
 sed -i '' -e "s/samuervin\/nginx:.*/samuervin\/nginx:$new_ver/g" $tmp_dir/environments/staging/my-app/1-deployment.yaml
